@@ -1,0 +1,21 @@
+<div class="logon-container" [formGroup]="signInForm">
+    <section class="form">
+        <img src="../../../../assets/logo.svg" alt="Panaceia - Gestão de Pacientes" />
+
+        <form>
+            <h1>Faça seu login</h1>
+            <input type="text" name="id" placeholder="Usuário" formControlName="username" />
+            <input type="password" name="id" placeholder="Senha" formControlName="password" />
+            <button class="button" type="submit" (click)="handleSubmitForm()">
+        Entrar
+      </button>
+
+            <a class="backLink" (click)="handleSignUp()">
+                <img src="../../../../assets/icons/lock.svg" alt="Cadastre-se" />Não tenho cadastro
+            </a>
+        </form>
+    </section>
+    <div class="medical">
+        <img src="../../../../assets/medical.png" alt="Background" />
+    </div>
+</div>

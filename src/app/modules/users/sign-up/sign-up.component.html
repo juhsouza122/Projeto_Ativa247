@@ -1,0 +1,47 @@
+<div class="register-container" [formGroup]="signUpForm">
+  <div class="content">
+    <section>
+      <img
+        src="../../../../assets/logo.svg"
+        alt="Panaceia - Gestão de Pacientes"
+      />
+      <h1>Cadastro</h1>
+      <p>
+        Faça seu cadastro e facilite a sua consulta com o médico de sua escolha.
+      </p>
+
+      <a class="backLink" (click)="handleSignIn()">
+        <img src="../../../../assets/icons/back-icon.svg" alt="Voltar" />
+        Já tenho cadastro
+      </a>
+    </section>
+    <form>
+      <input placeholder="CPF" formControlName="cpf" mask="000.000.000-00" />
+      <input placeholder="Nome Completo" formControlName="fullname" />
+      <input
+        placeholder="Telefone"
+        formControlName="phone"
+        mask="(00) 0000-0000"
+      />
+
+      <select name="" id="" formControlName="gender">
+        <option value="">Sexo</option>
+        <option value="M">Masculino</option>
+        <option value="F">Feminino</option>
+        <option value="ND">Não definido</option>
+      </select>
+      <div class="input-group">
+        <input type="password" placeholder="Senha" formControlName="password" />
+        <input
+          type="password"
+          placeholder="Confirme a senha"
+          formControlName="confirmPassword"
+        />
+      </div>
+
+      <button class="button" type="submit" (click)="handleSubmitForm()">
+        Cadastrar
+      </button>
+    </form>
+  </div>
+</div>
